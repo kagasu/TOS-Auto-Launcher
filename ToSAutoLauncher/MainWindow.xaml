@@ -1,0 +1,30 @@
+﻿<Controls:MetroWindow x:Class="ToSAutoLauncher.MainWindow"
+                      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                      xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+                      Title="TOS" 
+                      ShowMaxRestoreButton="False"
+                      ResizeMode="NoResize"
+                      GlowBrush="{DynamicResource AccentColorBrush}"
+                      Height="330" 
+                      Width="180"
+                      Activated="MetroWindow_Activated">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="tos.png"/>
+        </Grid.Background>
+
+        <Label x:Name="labelID" Content="ID" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="32"/>
+        <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Height="23" Margin="47,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True"/>
+
+        <Label x:Name="labelPassword" Content="Pass" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="32"/>
+        <PasswordBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="23" Margin="47,233,0,0" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True"/>
+
+        <Label x:Name="labelOTP" Content="OTP" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Width="32"/>
+        <TextBox x:Name="textBoxOTP" HorizontalAlignment="Left" Height="23" Margin="47,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True" TextChanged="textBoxOTP_TextChanged"/>
+
+
+
+        <Controls:MetroProgressBar x:Name="progressbar1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+    </Grid>
+</Controls:MetroWindow>
