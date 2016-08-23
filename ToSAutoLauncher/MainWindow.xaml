@@ -14,16 +14,16 @@
             <ImageBrush ImageSource="tos.png"/>
         </Grid.Background>
 
-        <Label x:Name="labelID" Content="ID" HorizontalAlignment="Left" Margin="10,202,0,0" VerticalAlignment="Top" Width="32"/>
-        <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Height="23" Margin="47,202,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True"/>
+        <Label x:Name="labelID" Content="ID" HorizontalAlignment="Left" Margin="10,177,0,0" VerticalAlignment="Top" Width="32"/>
+        <TextBox x:Name="textBoxID" HorizontalAlignment="Left" Height="23" Margin="47,177,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True"/>
 
-        <Label x:Name="labelPassword" Content="Pass" HorizontalAlignment="Left" Margin="10,233,0,0" VerticalAlignment="Top" Width="32"/>
-        <PasswordBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="23" Margin="47,233,0,0" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True"/>
+        <Label x:Name="labelPassword" Content="Pass" HorizontalAlignment="Left" Margin="10,208,0,0" VerticalAlignment="Top" Width="32"/>
+        <PasswordBox x:Name="textBoxPassword" HorizontalAlignment="Left" Height="23" Margin="47,208,0,0" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True"/>
 
-        <Label x:Name="labelOTP" Content="OTP" HorizontalAlignment="Left" Margin="10,264,0,0" VerticalAlignment="Top" Width="32"/>
-        <TextBox x:Name="textBoxOTP" HorizontalAlignment="Left" Height="23" Margin="47,264,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True" TextChanged="textBoxOTP_TextChanged"/>
+        <Label x:Name="labelOTP" Content="OTP" HorizontalAlignment="Left" Margin="10,239,0,0" VerticalAlignment="Top" Width="32"/>
+        <TextBox x:Name="textBoxOTP" HorizontalAlignment="Left" Height="23" Margin="47,239,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="117" Controls:TextBoxHelper.ClearTextButton="True" TextChanged="textBoxOTP_TextChanged"/>
 
-
+        <Button x:Name="buttonOtp" Content="OTP 無し" HorizontalAlignment="Left" Margin="47,266,0,0" VerticalAlignment="Top" Width="117" Height="11" Click="buttonOtp_Click"/>
 
         <Controls:MetroProgressBar x:Name="progressbar1" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
     </Grid>
