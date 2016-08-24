@@ -83,6 +83,11 @@ namespace ToSAutoLauncher
 
                 textBoxID.Text = json.Id;
                 textBoxPassword.Password = json.Password;
+
+                if(!json.UseOtp)
+                {
+                    Login();
+                }
             }
         }
 
