@@ -119,17 +119,15 @@ namespace ToSAutoLauncher
         {
             var wc = new WebClientEx();
             var str = wc.DownloadString("https://login.nexon.co.jp/login/");
-
-            var entmReg = new Regex("name=\"entm\" value='(.*?)'");
+            
             var idReg = new Regex("value='' id='(.*?)'");
             var passwordReg = new Regex("type=\"password\" id='(.*?)'");
             
             wc.Headers.Set("Referer", "https://login.nexon.co.jp/login/");
             wc.Headers.Set("User-Agent", "Mozilla");
 
-            wc.UploadValues("https://login.nexon.co.jp/login/login_process1.aspx ", new NameValueCollection()
+            wc.UploadValues("https://login.nexon.co.jp/login/login_process1.aspx", new NameValueCollection()
             {
-                { "entm", entmReg.Matches(str)[0].Groups[1].Value },
                 { idReg.Matches(str)[0].Groups[1].Value, textBoxID.Dispatcher.Invoke(() => textBoxID.Text) },
                 { passwordReg.Matches(str)[0].Groups[1].Value, textBoxPassword.Dispatcher.Invoke(() => textBoxPassword.Password) },
                 { "onetimepass", textBoxOTP.Dispatcher.Invoke(() => textBoxOTP.Text) },
@@ -157,7 +155,7 @@ namespace ToSAutoLauncher
                 return;
             }
             var moduleInfo = GetNGMModuleInfo();
-
+            
             Process.Start($"ngmj://launch/-dll:{moduleInfo.Host}:{moduleInfo.Crc} -locale:JP -mode:launch -game:16818186:0 -token:'{npp}' -passarg:''");
             progressbar1.Dispatcher.Invoke(() => progressbar1.IsIndeterminate = false);
             textBoxOTP.Dispatcher.Invoke(() => textBoxOTP.Text = "");
